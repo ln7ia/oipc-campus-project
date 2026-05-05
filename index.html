@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Campus Upgrade Proposal</title>
+  <title>Campus Upgrade</title>
   <style>
     body {
       font-family: Arial;
       margin: 0;
-      background: #f5f5f5;
+      background: #f5f7fa;
       text-align: center;
     }
  
     header {
-      background: #003366;
+      background: linear-gradient(90deg, #003366, #007BFF);
       color: white;
-      padding: 20px;
+      padding: 25px;
     }
  
-    section {
-      padding: 20px;
+    h2 {
+      margin-top: 30px;
+    }
+ 
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
  
     .card {
       background: white;
       margin: 15px;
       padding: 20px;
-      border-radius: 10px;
-      display: inline-block;
+      border-radius: 15px;
       width: 250px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+ 
+    .card:hover {
+      transform: scale(1.05);
     }
  
     button {
@@ -35,15 +45,41 @@
       background: #007BFF;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+      margin-top: 10px;
     }
  
-    #result {
-      margin-top: 20px;
-      font-weight: bold;
-      color: green;
+    button:hover {
+      background: #0056b3;
     }
+ 
+    /* POPUP */
+    #popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+ 
+    .popup-box {
+      background: white;
+      padding: 25px;
+      width: 350px;
+      margin: 120px auto;
+      border-radius: 15px;
+      text-align: left;
+      animation: fadeIn 0.3s;
+    }
+ 
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.9);}
+      to {opacity: 1; transform: scale(1);}
+    }
+ 
   </style>
 </head>
  
@@ -54,73 +90,33 @@
   <p>Improving classrooms and student experience</p>
 </header>
  
-<section>
-  <h2>🚫 Current Problems</h2>
+<h2>✨ Our Solutions</h2>
  
-  <div class="card">
-    <h3>Old Classrooms</h3>
-    <p>Outdated furniture and equipment</p>
-  </div>
- 
-  <div class="card">
-    <h3>Poor Technology</h3>
-    <p>No smart boards or digital tools</p>
-  </div>
- 
-  <div class="card">
-    <h3>Low Comfort</h3>
-    <p>Bad lighting and seating</p>
-  </div>
-</section>
- 
-<section>
-  <h2>✨ Our Solutions</h2>
+<div class="container">
  
   <div class="card">
     <h3>Modern Classrooms</h3>
-    <p>New furniture and design</p>
-    <button onclick="show('modern')">View Impact</button>
+    <p>New furniture & design</p>
+    <button onclick="show('modern')">View Details</button>
   </div>
  
   <div class="card">
     <h3>Smart Technology</h3>
     <p>Interactive screens & WiFi</p>
-    <button onclick="show('tech')">View Impact</button>
+    <button onclick="show('tech')">View Details</button>
   </div>
  
   <div class="card">
     <h3>Better Comfort</h3>
-    <p>Lighting, air, and seating</p>
-    <button onclick="show('comfort')">View Impact</button>
+    <p>Lighting, air & seating</p>
+    <button onclick="show('comfort')">View Details</button>
   </div>
  
-  <div id="result"></div>
-</section>
+</div>
  
-<section>
-  <h2>🌍 Student Attraction</h2>
-  <p>Modern facilities will attract more international students and improve learning experience.</p>
-</section>
+<!-- POPUP -->
+<div id="popup">
+  <div class="popup-box">
+    <h2 id="title"></h2>
+    <p id
  
-<script>
-function show(type) {
-  let text = "";
- 
-  if (type === "modern") {
-    text = "Modern classrooms improve student focus and satisfaction.";
-  }
- 
-  if (type === "tech") {
-    text = "Technology enhances interactive learning and engagement.";
-  }
- 
-  if (type === "comfort") {
-    text = "Better comfort increases productivity and wellbeing.";
-  }
- 
-  document.getElementById("result").innerText = text;
-}
-</script>
- 
-</body>
-</html>
