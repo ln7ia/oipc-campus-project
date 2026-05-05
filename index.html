@@ -1,11 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OIPC Campus Proposal</title>
+  <title>Campus Upgrade Proposal</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f5f5f5;
+      text-align: center;
+    }
+ 
+    header {
+      background: #003366;
+      color: white;
+      padding: 20px;
+    }
+ 
+    section {
+      padding: 20px;
+    }
+ 
+    .card {
+      background: white;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+ 
+    button {
+      padding: 10px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+ 
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
 </head>
-
+ 
 <body>
-  <h1>Reimagining the OIPC Campus</h1>
-  <p>This is our project website.</p>
+ 
+<header>
+  <h1>🎓 Campus Upgrade Plan</h1>
+  <p>Improving classrooms and student experience</p>
+</header>
+ 
+<section>
+  <h2>🚫 Current Problems</h2>
+ 
+  <div class="card">
+    <h3>Old Classrooms</h3>
+    <p>Outdated furniture and equipment</p>
+  </div>
+ 
+  <div class="card">
+    <h3>Poor Technology</h3>
+    <p>No smart boards or digital tools</p>
+  </div>
+ 
+  <div class="card">
+    <h3>Low Comfort</h3>
+    <p>Bad lighting and seating</p>
+  </div>
+</section>
+ 
+<section>
+  <h2>✨ Our Solutions</h2>
+ 
+  <div class="card">
+    <h3>Modern Classrooms</h3>
+    <p>New furniture and design</p>
+    <button onclick="show('modern')">View Impact</button>
+  </div>
+ 
+  <div class="card">
+    <h3>Smart Technology</h3>
+    <p>Interactive screens & WiFi</p>
+    <button onclick="show('tech')">View Impact</button>
+  </div>
+ 
+  <div class="card">
+    <h3>Better Comfort</h3>
+    <p>Lighting, air, and seating</p>
+    <button onclick="show('comfort')">View Impact</button>
+  </div>
+ 
+  <div id="result"></div>
+</section>
+ 
+<section>
+  <h2>🌍 Student Attraction</h2>
+  <p>Modern facilities will attract more international students and improve learning experience.</p>
+</section>
+ 
+<script>
+function show(type) {
+  let text = "";
+ 
+  if (type === "modern") {
+    text = "Modern classrooms improve student focus and satisfaction.";
+  }
+ 
+  if (type === "tech") {
+    text = "Technology enhances interactive learning and engagement.";
+  }
+ 
+  if (type === "comfort") {
+    text = "Better comfort increases productivity and wellbeing.";
+  }
+ 
+  document.getElementById("result").innerText = text;
+}
+</script>
+ 
 </body>
 </html>
